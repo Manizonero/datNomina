@@ -10,6 +10,11 @@ document.getElementById("guardar").addEventListener("click", function () {
         return;
     }
 
+    // Mostrar indicador de carga y deshabilitar el botón
+    indicadorCarga.style.display = "inline-block";
+    botonGuardar.disabled = true;
+    botonGuardar.textContent = "Guardando...";
+
     fetch("https://script.google.com/macros/s/AKfycbxPFciDgJb5K4russ5-aT6dmNduW7kzFkbM3AcBEMTRRMlHRXrtzlRunK5I0JCsh4w/exec", {
         method: "POST",
         mode: "no-cors",
