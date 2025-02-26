@@ -2,7 +2,7 @@
 document.getElementById("guardar").addEventListener("click", function(event) {
     event.preventDefault(); // Evita el envío predeterminado del formulario
     
-    let placa = document.getElementById("placa").value;
+    let placa = document.getElementById("placa").value.toUpperCase();
     let orden = document.getElementById("orden").value;
     let trabajo = document.getElementById("trabajo").value;
     
