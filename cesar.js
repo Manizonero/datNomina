@@ -1,6 +1,6 @@
 document.getElementById("guardar").addEventListener("click", function () {
     var placa = document.getElementById("placa").value.trim();
-    var orden = document.getElementById("ot").value.trim();
+    var orden = document.getElementById("orden").value.trim();
     var trabajo = document.getElementById("trabajo").value.trim();
     var botonGuardar = document.getElementById("guardar");
     var indicadorCarga = document.getElementById("cargando");
@@ -9,11 +9,6 @@ document.getElementById("guardar").addEventListener("click", function () {
         alert("⚠️ Debes ingresar la placa, OT y el trabajo antes de guardar.");
         return;
     }
-
-    // Mostrar indicador de carga y deshabilitar el botón
-    indicadorCarga.style.display = "inline-block";
-    botonGuardar.disabled = true;
-    botonGuardar.textContent = "Guardando...";
 
     fetch("https://script.google.com/macros/s/AKfycbxPFciDgJb5K4russ5-aT6dmNduW7kzFkbM3AcBEMTRRMlHRXrtzlRunK5I0JCsh4w/exec", {
         method: "POST",
