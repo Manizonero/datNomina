@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #6c6d70;
+    text-align: center;
+    color: #cfa5a5;
+}
+
+header {
+    background-color: #444; 
+    color: #000000;
+    padding: 20px 0;
+    font-size: 24px;
+}
+
+h1, h2 {
+    margin: 10px 0;
+    color: #ffffff;
+}
+
+main {
+    padding: 20px;
+}
+
+.procesos {
+    background: #707066;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.botones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.proceso {
+    background: #f7f3e9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.proceso:hover {
+    transform: translateY(-5px);
+}
+
+.proceso img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    border: 5px solid #444;
+}
+
+.atajo {
+    background: #f7f3e9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.atajo:hover {
+    transform: translateY(-5px);
+}
+
+.atajo img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    border: 5px solid #444;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #444;
+    color: #fdf6e3;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #666;
+}
+
+footer {
+    font-size: 12px;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #444;
+    color: #fdf6e3;
+}

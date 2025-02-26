@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CESAR</title>
+    <link rel="stylesheet" href="cesar.css">
+</head>
+<body>
+    <header>
+        <h1>CESAR</h1>
+    </header>
+
+    <main>
+        <div class="main-buttons">
+            <div class="imgsmile">
+                <img src="asset/smile.png" alt="smile">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfaRh66P9tO7675j4ghsAXEw4KUmywTmObOMpvx_wRw3y2QfA/formResponse?pli=1" class="btnsmile" target="_blank">SMILE</a>
+            </div>
+
+            <div class="imgsheet">
+                <img src="asset/sheet.png" alt="ecxel">
+                <a href="https://docs.google.com/spreadsheets/d/1ihN8w2Mz5ITqti4ulsA0cSZE2A_WKNzYrwRNVlY23f0/edit?gid=552049712#gid=552049712" class="btnsheet" target="_blank">Sheet</a>
+            </div>
+        </div>
+
+        <section class="contHoras">
+            <label for="colchon_sin_fac">Horas No Facturadas:</label>
+            <input type="number" id="colchon_sin_fac" name="colchon_sin_fac" class="input-size" required>
+
+            <label for="colchon_fac">Horas Facturadas:</label>
+            <input type="number" id="colchon_fac" name="colchon_fac" class="input-size" required>
+        </section>
+
+        <a href="actualizar.html" class="btnactu">ACTUALIZAR</a> <section class="caja-trabajo">
+            <h2>Registro Trabajo</h2>
+            <form id="registroTrabajo">
+                <label for="placa">PLACA:</label>
+                <input type="text" id="placa" name="placa" class="input-size" required>
+                <label for="ot">OT:</label>
+                <input type="number" id="ot" name="ot" class="input-size" required>
+
+                <label for="trabajo">TRABAJO:</label>
+                <textarea id="trabajo" name="trabajo" class="input-size"></textarea>
+
+                <div class="form-buttons">
+                    <button id="guardar">Guardar</button>
+                    <span id="cargando" class="loading-spinner"></span>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Derechos Reservados | Creado por Jhonatan Bustos.</p>
+    </footer>
+
+    <script defer src="cesar.js"></script>
+</body>
+</html>
