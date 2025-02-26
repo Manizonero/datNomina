@@ -21,14 +21,25 @@ document.getElementById("guardar").addEventListener("click", function(event) {
 
 document.addEventListener("DOMContentLoaded", function () {
     const btnActualizar = document.querySelector(".btnactu");
-    const horasNoFacturadas = document.getElementById("hfac");
-    const horasFacturadas = document.getElementById("hnofac");
+    const horasNoFacturadas = document.getElementById("hnofac");
+    const horasFacturadas = document.getElementById("hfac");
+    
+    // Crear elemento para el mensaje de carga
+    const mensajeCarga = document.createElement("p");
+    mensajeCarga.textContent = "Cargando Datos Por Favor Espere...";
+    mensajeCarga.style.display = "none"; // Oculto por defecto
+    mensajeCarga.style.color = "blue";
+    mensajeCarga.style.fontWeight = "bold";
+    
+    // Insertar mensaje antes del botón actualizar
+    btnActualizar.insertAdjacentElement("beforebegin", mensajeCarga);
 
-    // URL del Web App de Google Apps Script (reemplázala con la tuya)
     const webAppURL = "https://script.google.com/macros/s/AKfycby5-bZZfBQc5CgRPA_kpy2WxpRla83tGA0iFyfPapJ6-qCVGnFawefCiGmEqpkZnCtDAA/exec";
 
     async function actualizarDatos() {
         try {
+            mensajeCarga.style.display = "block"; // Mostrar mensaje de carga
+
             const response = await fetch(webAppURL);
             const data = await response.json();
 
@@ -38,6 +49,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         } catch (error) {
             console.error("Error al obtener datos:", error);
+        } finally {
+            // Ocultar mensaje de carga después de obtener la respuesta
+            setTimeout(() => {
+                mensajeCarga.style.display = "none";
+            }, 1000); // Ocultar después de 1 segundo (opcional)
         }
     }
 
