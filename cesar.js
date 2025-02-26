@@ -18,3 +18,31 @@ document.getElementById("guardar").addEventListener("click", function(event) {
         document.getElementById("registroTrabajo").reset();
     }).catch(error => console.error("Error:", error));
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const btnActualizar = document.querySelector(".btnactu");
+    const horasNoFacturadas = document.getElementById("hfac");
+    const horasFacturadas = document.getElementById("hnofac");
+
+    // URL del Web App de Google Apps Script (reemplázala con la tuya)
+    const webAppURL = "https://script.google.com/macros/s/AKfycby5-bZZfBQc5CgRPA_kpy2WxpRla83tGA0iFyfPapJ6-qCVGnFawefCiGmEqpkZnCtDAA/exec";
+
+    async function actualizarDatos() {
+        try {
+            const response = await fetch(webAppURL);
+            const data = await response.json();
+
+            // Mostrar datos en los inputs
+            horasFacturadas.value = data.horas_facturadas;
+            horasNoFacturadas.value = data.horas_no_facturadas;
+
+        } catch (error) {
+            console.error("Error al obtener datos:", error);
+        }
+    }
+
+    btnActualizar.addEventListener("click", function (event) {
+        event.preventDefault();
+        actualizarDatos();
+    });
+});

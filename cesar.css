@@ -123,7 +123,7 @@ label {
 }
 
 input, textarea {
-    width: 100px;
+    width: 20%;
     padding: 8px;
     border-radius: 5px;
     border: 2px solid #bbb;
@@ -137,14 +137,14 @@ input, textarea {
     text-transform: uppercase;
     color: #333;
     font-size: 18px;
-    width: 100px;
+    width: 20%;
     gap: 10%;
 }
 
-#ot{
+#orden{
     color: #333;
     font-size: 18px;
-    width: 140px;
+    width: 25%;
 }
 
 
