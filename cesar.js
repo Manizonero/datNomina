@@ -1,11 +1,11 @@
 document.getElementById("guardar").addEventListener("click", function () {
     var placa = document.getElementById("placa").value.trim();
-    var ot = document.getElementById("ot").value.trim();
+    var orden = document.getElementById("ot").value.trim();
     var trabajo = document.getElementById("trabajo").value.trim();
     var botonGuardar = document.getElementById("guardar");
     var indicadorCarga = document.getElementById("cargando");
 
-    if (!placa || !ot || !trabajo) {
+    if (!placa || !orden || !trabajo) {
         alert("⚠️ Debes ingresar la placa, OT y el trabajo antes de guardar.");
         return;
     }
@@ -19,7 +19,7 @@ document.getElementById("guardar").addEventListener("click", function () {
         method: "POST",
         mode: "no-cors",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ placa: placa, OT: ot, trabajo: trabajo })
+        body: JSON.stringify({ placa: placa, orden: orden, trabajo: trabajo })
     })
     .then(() => {
         alert("✅ Datos Guardados en Hoja Cesar");
