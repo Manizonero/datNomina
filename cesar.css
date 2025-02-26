@@ -295,6 +295,13 @@ footer {
         width: 94%;
         margin-bottom: 15px;
     }
+    #placa{
+        width: 35%;
+    }
+    
+    #orden{
+        width: 35%;
+    }
 
     label {
         width: 100%;
