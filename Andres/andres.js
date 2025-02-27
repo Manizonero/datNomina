@@ -8,7 +8,7 @@ document.getElementById("guardar").addEventListener("click", function(event) {
     
     let data = { placa: placa, orden: orden, trabajo: trabajo };
     
-    fetch("https://script.google.com/macros/s/AKfycbxWIQxCxQQthwC2gYLCrGqDHBU67ixAfIOxARkvPpHllC1WPWVe6UoFkmdAaR61oyjSwQ/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbw-7To3DPGahrV1p9DfsNN5jmxkFoX2dJDaR1cqprViiltHPPKcwNyk04VyLbD9vBDkyw/exec", {
         method: "POST",
         mode: "no-cors",
         headers: { "Content-Type": "application/json" },

@@ -8,7 +8,7 @@ document.getElementById("guardar").addEventListener("click", function(event) {
     
     let data = { placa: placa, orden: orden, trabajo: trabajo };
     
-    fetch("https://script.google.com/macros/s/AKfycbxWIQxCxQQthwC2gYLCrGqDHBU67ixAfIOxARkvPpHllC1WPWVe6UoFkmdAaR61oyjSwQ/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbxRJEoYQ1_tGy3_J-QETlVsJSyLKBEbnA3t-5OBBiCdV8VE3FUdXM98J1x65vWbABpl/exec", {
         method: "POST",
         mode: "no-cors",
         headers: { "Content-Type": "application/json" },
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Insertar mensaje antes del botón actualizar
     btnActualizar.insertAdjacentElement("beforebegin", mensajeCarga);
 
-    const webAppURL = "https://script.google.com/macros/s/AKfycby5-bZZfBQc5CgRPA_kpy2WxpRla83tGA0iFyfPapJ6-qCVGnFawefCiGmEqpkZnCtDAA/exec";
+    const webAppURL = "https://script.google.com/macros/s/AKfycbwRxqkjKo26m4AbOvQsfiMFehKMpCuZqeqSOlm_7sjpiwX9dXDWU2mJjdBhkmtsJKGA0g/exec";
 
     async function actualizarDatos() {
         try {
