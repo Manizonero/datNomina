@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Insertar mensaje antes del botón actualizar
     btnActualizar.insertAdjacentElement("beforebegin", mensajeCarga);
 
-    const webAppURL = "https://script.google.com/macros/s/AKfycby5-bZZfBQc5CgRPA_kpy2WxpRla83tGA0iFyfPapJ6-qCVGnFawefCiGmEqpkZnCtDAA/exec";
+    const webAppURL = "https://script.google.com/macros/s/AKfycbyG1EKC6FojXN5aFa4rQtYhUNM18XD0u6Bq_sqXsUbMF9rz9_3EobeaqUTQntM45QWpGw/exec";
 
     async function actualizarDatos() {
         try {
